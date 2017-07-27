@@ -76,7 +76,6 @@ public class ContactStep implements En {
    		 driver.get(Constants.testUrl);
    		 driver.navigate().to(Constants.ContactURL);
    		 scenario = Hook.getScenario();
-   		 System.out.println(scenario);
 		 scenario.write("User is on Contact Screen");
 	});
 
@@ -93,8 +92,6 @@ public class ContactStep implements En {
 	Given("^Hit \"([^\"]*)\" (\\d+) times$", (String urlString, Integer repeat) -> {
 		pL = new PageLoad();
 		scenario = Hook.getScenario();
-		System.out.println(scenario);
-		
 		try {
 			pageLoadList = pL.getresponse(urlString,repeat);
 			scenario.write("User successfully Hit the URL "+repeat+ "  times");
